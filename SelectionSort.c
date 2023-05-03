@@ -26,7 +26,7 @@ int main() {
 
     srand(time(NULL));
 
-    printf("Unsorted array:\n");
+    printf("Algoritmo não ordenado: \n");
     for (i = 0; i < N; i++) {
         arr[i] = rand();
         printf("%d ", arr[i]);
@@ -36,7 +36,7 @@ int main() {
     selectionSort(arr, N);
     clock_t end = clock();
 
-    printf("\n\nSorted array:\n");
+    printf("\n\n Algoritmo ordenado: \n");
     for (i = 0; i < N; i++) {
         printf("%d ", arr[i]);
     }
