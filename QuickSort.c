@@ -19,9 +19,9 @@ int hParticao(int arr[], int anterior, int proximo) {
         if (i >= j)
             return j;
 
-        int tempo = arr[i];
+        int temp = arr[i];
         arr[i] = arr[j];
-        arr[j] = tempo;
+        arr[j] = temp;
     }
 }
 
