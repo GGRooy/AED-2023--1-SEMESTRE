@@ -3,22 +3,22 @@
 #include <time.h>
 
 void heapify(int arr[], int n, int i) {
-    int largest = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
+    int maior = i;
+    int esquerda = 2 * i + 1;
+    int direita = 2 * i + 2;
 
-    if (left < n && arr[left] > arr[largest])
-        largest = left;
+    if (esquerda < n && arr[esquerda] > arr[maior])
+        maior = esquerda;
 
-    if (right < n && arr[right] > arr[largest])
-        largest = right;
+    if (direita < n && arr[direita] > arr[maior])
+        maior = direita;
 
-    if (largest != i) {
+    if (maior != i) {
         int temp = arr[i];
-        arr[i] = arr[largest];
-        arr[largest] = temp;
+        arr[i] = arr[maior];
+        arr[maior] = temp;
 
-        heapify(arr, n, largest);
+        heapify(arr, n, maior);
     }
 }
 
@@ -36,7 +36,7 @@ void heapSort(int arr[], int n) {
 }
 
 int main() {
-    int n = //valor a considerar;
+    int n = 20000;
     int arr[n];
 
     srand(time(NULL));
